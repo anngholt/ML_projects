@@ -12,18 +12,17 @@ In this project, I explore how to model a 2D function (Franke's function) using 
   - Lasso Regression
 - Evaluate model performance using:
   - Mean Squared Error (MSE)
-  - R² Score**
+  - R² Score
 - Explore:
   - Impact of polynomial degree
   - Effect of noise on fit quality
   - Regularization and model complexity
   - Bias-variance tradeoff
 - Apply resampling methods:
-  - Bootstrapping**
+  - Bootstrapping
   - k-Fold Cross-Validation
 
 ## Project Structure
-
 Project1/
 ├── src/
 │   ├── data_gen.py
