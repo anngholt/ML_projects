@@ -34,7 +34,8 @@ print("R² score:", r2)
 
 # --- RESULTS ---
 # Manual fit coefficients (beta): [1.99050631 0.1870752  4.78175794]
-# Scikit-learn fit coefficients: Intercept: [1.99050631]
+# Scikit-learn fit coefficients: 
+# Intercept: [1.99050631]
 # Coefficients: [[0.         0.1870752  4.78175794]]
 # Mean Squared Error: 0.008862148439478542
 # R² score: 0.9966267034372802
