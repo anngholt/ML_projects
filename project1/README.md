@@ -22,6 +22,8 @@ In this project, I explore how to model a 2D function (Franke's function) using 
   - Bootstrapping
   - k-Fold Cross-Validation
 
+<pre> ## Project Structure ``` Project1/ ├── src/ │ ├── data_gen.py │ ├── regression.py │ ├── metrics.py │ ├── plots.py ├── notebooks/ │ └── project1_analysis.ipynb ├── tests/ │ └── test_regression.py ├── results/ ├── figures/ ├── main.py ├── requirements.txt └── README.md ``` </pre>
+
 ## Project Structure
 Project1/
 ├── src/
