@@ -3,33 +3,24 @@
 
 In this project, I explore how to model a 2D function (Franke's function) using different regression techniques and study model behavior under various conditions such as noise, model complexity, and regularization.
 
----
 
 ## Goals of the Project
 
 - Fit the Franke function with:
-  - **Ordinary Least Squares (OLS)**
-  - **Ridge Regression**
-  - **Lasso Regression**
+  - Ordinary Least Squares (OLS)
+  - Ridge Regression
+  - Lasso Regression
 - Evaluate model performance using:
-  - **Mean Squared Error (MSE)**
-  - **R² Score**
+  - Mean Squared Error (MSE)
+  - R² Score**
 - Explore:
   - Impact of polynomial degree
   - Effect of noise on fit quality
   - Regularization and model complexity
-  - **Bias-variance tradeoff**
+  - Bias-variance tradeoff
 - Apply resampling methods:
-  - **Bootstrapping**
-  - **k-Fold Cross-Validation**
-
----
-
-## The Franke Function
-
-A commonly used test function in two dimensions:
-
-z = FrankeFunction(x, y) + noise
+  - Bootstrapping**
+  - k-Fold Cross-Validation
 
 ## Project Structure
 
