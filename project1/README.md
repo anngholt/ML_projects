@@ -22,3 +22,14 @@ In this project, I explore how to model a 2D function (Franke's function) using 
   - Bootstrapping
   - k-Fold Cross-Validation
 
+## Structure
+
+Project1/
+├── src/
+│   ├── franke_function.py
+│   ├── metrics.py
+├── main.py
+├── results/
+├── figures/
+├── requirements.txt
+└── README.md
