@@ -23,8 +23,8 @@ In this project, I explore how to model a 2D function (Franke's function) using 
   - k-Fold Cross-Validation
 
 ## Project Structure 
-``` Project1/ ├── src/ │ ├── data_gen.py │ ├── regression.py │ ├── metrics.py │ ├── plots.py ├── notebooks/ │ └── project1_analysis.ipynb ├── tests/ │ └── test_regression.py ├── results/ ├── figures/ ├── main.py ├── requirements.txt └── README.md 
-```
+Project1/ ├── src/ │ ├── data_gen.py │ ├── regression.py │ ├── metrics.py │ ├── plots.py ├── notebooks/ │ └── project1_analysis.ipynb ├── tests/ │ └── test_regression.py ├── results/ ├── figures/ ├── main.py ├── requirements.txt └── README.md 
+
 
 ## Project Structure
 Project1/
