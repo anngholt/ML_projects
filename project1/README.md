@@ -35,14 +35,16 @@ z = FrankeFunction(x, y) + noise
 
 Project1/
 ├── src/
-│   ├── data_gen.py         # Data generation using Franke function
-│   ├── regression.py       # OLS, Ridge, and Lasso implementations
-│   ├── metrics.py          # MSE, R², bias, variance, etc.
-│   └── plots.py            # Visualization utilities
+│   ├── data_gen.py
+│   ├── regression.py
+│   ├── metrics.py
+│   ├── plots.py
 ├── notebooks/
-│   └── project1_analysis.ipynb  # Main exploratory notebook
-├── results/                # Output files, model scores, tables
-├── figures/                # Plots and surfaces
-├── main.py                 # Script for running everything
-├── requirements.txt        # Python dependencies
-└── README.md               # This file
+│   └── project1_analysis.ipynb
+├── tests/
+│   └── test_regression.py
+├── results/
+├── figures/
+├── main.py
+├── requirements.txt
+└── README.md
