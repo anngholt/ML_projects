@@ -16,6 +16,7 @@ from src.franke_function import franke_function
 from src.data_gen import create_design_matrix
 from src.metrics import mean_squared_error, r2_score
 from src.regression import LinearRegression, RidgeRegression, LassoRegression
+from src.resampling import bootstrap
 
 # -----------------------
 # Configuration Flags
@@ -113,3 +114,13 @@ if SHOW_PLOT or SAVE_PLOT:
 
     if SHOW_PLOT:
         plt.show()
+
+
+# --------------------
+# Bootstrap Resampling (Bias-Variance)
+# --------------------
+mse, bias, var = bootstrap(X_train, z_train, LinearRegression, n_bootstrap=100)
+print("\nBootstrap Results (Train Set, OLS):")
+print(f"MSE:   {mse:.4f}")
+print(f"Bias²: {bias:.4f}")
+print(f"Var:   {var:.4f}")

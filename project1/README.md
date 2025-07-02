@@ -22,6 +22,18 @@ In this project, I explore how to model a 2D function (Franke's function) using 
   - Bootstrapping
   - k-Fold Cross-Validation
 
+## How to use main.py
+
+Change this section to switch experiments:
+
+MODEL_TYPE = "ridge"  # Choose: "ols", "ridge", or "lasso"
+LAMBDA = 1e-3
+POLY_DEGREE = 5
+NOISE_STD = 0.1
+
+
+
+
 ## Structure
 
 Project1/
