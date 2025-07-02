@@ -67,6 +67,8 @@ def run_bias_variance_analysis(
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    save_path = os.path.join(project_root, "figures/bias_variance_tradeoff.png")
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     plt.savefig(save_path)
     plt.show()

@@ -65,7 +65,13 @@ def run_kfold_analysis(
     plt.tight_layout()
 
     # Ensure directory exists and save plot
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    save_path = os.path.join(project_root, "figures/kfold_cv_results.png")
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
+
+    print("Current working directory:", os.getcwd())
+    print("Saving plot to:", os.path.abspath(save_path))
+    
     plt.savefig(save_path)
     plt.show()
 

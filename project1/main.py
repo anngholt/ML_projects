@@ -16,7 +16,7 @@ from src.franke_function import franke_function
 from src.data_gen import create_design_matrix
 from src.metrics import mean_squared_error, r2_score
 from src.regression import LinearRegression, RidgeRegression, LassoRegression
-from src.resampling import bootstrap
+from src.resampling import bootstrap, k_fold_cross_validation
 
 # -----------------------
 # Configuration Flags
@@ -124,3 +124,15 @@ print("\nBootstrap Results (Train Set, OLS):")
 print(f"MSE:   {mse:.4f}")
 print(f"Bias²: {bias:.4f}")
 print(f"Var:   {var:.4f}")
+
+# --------------------
+# k-Fold Cross-Validation
+# --------------------
+avg_mse, avg_bias, avg_var = k_fold_cross_validation(
+    X_train, z_train, model.__class__, k=5, lmbda=LAMBDA if MODEL_TYPE in ["ridge", "lasso"] else None
+)
+
+print("\nk-Fold Cross-Validation Results (Train Set):")
+print(f"Avg MSE:   {avg_mse:.4f}")
+print(f"Avg Bias²: {avg_bias:.4f}")
+print(f"Avg Var:   {avg_var:.4f}")
