@@ -2,6 +2,10 @@
 
 import numpy as np
 
+# --------------------
+# Ordinary Least Squares Regression
+# --------------------
+
 class LinearRegression:
     """
     Ordinary Least Squares Regression (OLS).
@@ -31,6 +35,9 @@ class LinearRegression:
         """
         return X @ self.beta
 
+# --------------------
+# Ridge Regression
+# --------------------
 
 class RidgeRegression:
     """
@@ -63,3 +70,58 @@ class RidgeRegression:
         - y_pred: Predicted target values
         """
         return X @ self.beta
+
+# --------------------
+# Lasso Regression
+# --------------------
+
+class LassoRegression:
+    """
+    Lasso Regression using coordinate descent.
+    Solves: minimize ||y - Xβ||² + λ * ||β||₁
+    """
+    def __init__(self, lmbda=1.0, max_iter=1000, tol=1e-4):
+        self.lmbda = lmbda
+        self.max_iter = max_iter
+        self.tol = tol
+        self.beta = None
+
+    def soft_threshold(self, rho, lmbda):
+        """
+        Soft thresholding operator.
+        """
+        if rho < -lmbda:
+            return rho + lmbda
+        elif rho > lmbda:
+            return rho - lmbda
+        else:
+            return 0.0
+
+    def fit(self, X, y):
+        """
+        Fit the Lasso model to the training data using coordinate descent.
+        """
+        n_samples, n_features = X.shape
+        self.beta = np.zeros(n_features)
+
+        for iteration in range(self.max_iter):
+            beta_old = self.beta.copy()
+
+            for j in range(n_features):
+                tmp_beta = self.beta.copy()
+                tmp_beta[j] = 0.0
+                residual = y - X @ tmp_beta
+                rho = X[:, j] @ residual
+
+                self.beta[j] = self.soft_threshold(rho, self.lmbda)
+
+            # Check convergence
+            if np.sum(np.abs(self.beta - beta_old)) < self.tol:
+                break
+
+    def predict(self, X):
+        """
+        Predict using the Lasso regression model.
+        """
+        return X @ self.beta
+
